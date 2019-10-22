@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JSP梳理回顾前端开发：HTML、CSS、JS(JavaScript)企业中前端工程师：使用前端框架(BootStrap/easyUI/VUE/Angular)开发后端开发：JavaSE、JSP、JavaWeb（良好的稳定性、健壮性优于其他语言。企业级应用首选之一企业中的后端工程师：使用后端框架(SpringMVC/Struts2/Spring/myBatis)开发。“全栈工程师”C语言：工业控制">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-21T11:03:29.531Z">
+<meta property="og:updated_time" content="2019-10-21T23:58:29.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="课堂笔记 10月21更">
 <meta name="twitter:description" content="JSP梳理回顾前端开发：HTML、CSS、JS(JavaScript)企业中前端工程师：使用前端框架(BootStrap/easyUI/VUE/Angular)开发后端开发：JavaSE、JSP、JavaWeb（良好的稳定性、健壮性优于其他语言。企业级应用首选之一企业中的后端工程师：使用后端框架(SpringMVC/Struts2/Spring/myBatis)开发。“全栈工程师”C语言：工业控制">
@@ -197,17 +197,14 @@
 <li>Servlet更多的是类似于一个Controller，用来做控制。 <h3 id="Servlet类中的方法"><a href="#Servlet类中的方法" class="headerlink" title="Servlet类中的方法"></a>Servlet类中的方法</h3><h4 id="Servlet中的方法"><a href="#Servlet中的方法" class="headerlink" title="Servlet中的方法"></a>Servlet中的方法</h4>doGet()方法：用get方式传输网络数据 get方式：明文传参(地址栏显示)、传输数据较小。<br>doPost()方法：用post方式传输网络数据 post方式：暗文传参(地址栏不显示)、传输数据较大。<h3 id="页面跳转方式"><a href="#页面跳转方式" class="headerlink" title="页面跳转方式"></a>页面跳转方式</h3><h4 id="页面跳转的方式分类："><a href="#页面跳转的方式分类：" class="headerlink" title="页面跳转的方式分类："></a>页面跳转的方式分类：</h4></li>
 </ul>
 <p>1.转发：foward(地址栏URL不变)</p>
-<hr>
-<p>request.getRequestDispatcher(“hello.jsp”).forward(request，response);//页面转发  </p>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getRequestDispatcher(&quot;hello.jsp&quot;).forward(request，response);//页面转发</span><br></pre></td></tr></table></figure>
+
 <ol start="2">
-<li>重定向：redirect(地址栏URL变化)</li>
-</ol>
-<hr>
-<p>response.sendRedirect(“资源的URL”); </p>
-<hr>
-<ol start="3">
-<li>两种跳转方式异同</li>
+<li><p>重定向：redirect(地址栏URL变化)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirect(&quot;资源的URL&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两种跳转方式异同</p>
+</li>
 </ol>
 <ul>
 <li>转发使用的是getRequestDispatcher()方法;重定向使用的是sendRedirect(); </li>
@@ -327,8 +324,8 @@
     </a>
   
   
-    <a href="/2019/10/13/JAVA知识点/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JAVA知识点</div>
+    <a href="/2019/10/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
   
