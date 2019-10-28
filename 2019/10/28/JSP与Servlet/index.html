@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>JSP与Servlet | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP与Servlet">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/JSP与Servlet/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-28T02:13:41.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="JSP与Servlet">
+<meta name="twitter:description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,97 +154,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JSP与Servlet" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JSP与Servlet
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/JSP与Servlet/" class="archive-article-date">
+
+        
+        <a href="/2019/10/28/JSP与Servlet/" class="archive-article-date">
   	<time datetime="2019-10-28T01:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/JSP与Servlet/">JSP与Servlet</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ul>
+<li>JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。</li>
+</ul>
+<ul>
+<li>Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。</li>
+</ul>
+<ul>
+<li>JSP是放在服务器中展示的页面。</li>
+</ul>
+<ul>
+<li>JSP有9个内置对象：request、response、page、session、application、out、pagecontext、exception、config。</li>
+</ul>
+<ul>
+<li>JSP是运行小型项目。<h3 id="JSp插入CSS样式："><a href="#JSp插入CSS样式：" class="headerlink" title="JSp插入CSS样式："></a>JSp插入CSS样式：</h3></li>
+<li>(1)外部样式<br>当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用<link>标签链接到样式表。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&lt;%=uiPath%&gt;hwtt_ui/skins/&lt;%=skinName%&gt;/css/login.css&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+</li>
+</ul>
+<p>注：rel 属性规定当前文档与被链接文档之间的关系，在该例子中rel 属性指示被链接的文档是一个样式表。</p>
+<ul>
+<li>(2)内部样式<br>当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;style&gt;标签在文档头部定义内部样式表。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;        </span><br><span class="line">.loginBtn&#123;display:block;            </span><br><span class="line">          cursor: pointer;            </span><br><span class="line">          height: 32px;            </span><br><span class="line">          margin-bottom: 1px;            </span><br><span class="line">          width: 100px; </span><br><span class="line">          &#125;    </span><br><span class="line">          &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>(3)内联样式<br>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style属性可以包含任何CSS属性。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;authCode&quot; style=&quot;vertical-align: middle&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><ul>
+<li>Servlet主要用于写大型项目。</li>
+</ul>
+<ul>
+<li>Servlet只提供后端的逻辑控制。</li>
+</ul>
+<ul>
+<li>Servlet也有9个内置对象。<h2 id="JSP传递数据给Servlet的方式"><a href="#JSP传递数据给Servlet的方式" class="headerlink" title="JSP传递数据给Servlet的方式"></a>JSP传递数据给Servlet的方式</h2><h3 id="form表单："><a href="#form表单：" class="headerlink" title="form表单："></a>form表单：</h3></li>
+<li>方法1<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;项目名/servlet名&quot;  method=&quot;post或者get&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; name=&quot;ok&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>方法2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form name=&quot;form1&quot; id=&quot;form1&quot; action=&quot;项目名/servlet名&quot;  method=&quot;post或者get&quot;&gt; </span><br><span class="line">&lt;input type=&quot;button&quot; name=&quot;ok&quot; value=&quot;提交&quot; onclick=&quot;submit()&quot;&gt; </span><br><span class="line">&lt;/form&gt; </span><br><span class="line">&lt;script&gt; function submit()&#123;      $(&quot;#form1&quot;).submit(); &#125; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="url传值"><a href="#url传值" class="headerlink" title="url传值"></a>url传值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;a1&quot; href=&quot;&quot; &gt;&lt;/a&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"> $(&quot;#a1&quot;).attr(&quot;href&quot;,&quot;url?参数=&quot;+值);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Servlet把数据传给JSP"><a href="#Servlet把数据传给JSP" class="headerlink" title="Servlet把数据传给JSP"></a>Servlet把数据传给JSP</h2><h3 id="重定向-Redirect-：是路径的跳转，内容和-url都改变。不允许带-request参数-session参数可以-，即不允许在servlet里给-request对象使用setAttribute方法传给下一页面。在-servlet里使用-response-sendRedirect-url-方法。"><a href="#重定向-Redirect-：是路径的跳转，内容和-url都改变。不允许带-request参数-session参数可以-，即不允许在servlet里给-request对象使用setAttribute方法传给下一页面。在-servlet里使用-response-sendRedirect-url-方法。" class="headerlink" title="重定向 ( Redirect)：是路径的跳转，内容和 url都改变。不允许带 request参数( session参数可以)，即不允许在servlet里给 request对象使用setAttribute方法传给下一页面。在 servlet里使用 response.sendRedirect(url) 方法。"></a>重定向 ( Redirect)：是路径的跳转，内容和 url都改变。不允许带 request参数( session参数可以)，即不允许在servlet里给 request对象使用setAttribute方法传给下一页面。在 servlet里使用 response.sendRedirect(url) 方法。</h3><p>注意：这里的 url前不带斜线/,如 response.sendRedirect(“test.jsp”)。</p>
+<h3 id="url转发-Forward-：是页面的跳转，页面内容发生改变，url不变。可以带-request和-session参数。在-servlet里使用-getServletConfig-getServletContext-getRequestDispatcher-url-forward-request-response-。而这里的url前需要带斜线-，如getServletConfig-getServletContext-getRequestDispatcher-”-test-jsp“-forward-request-response-。"><a href="#url转发-Forward-：是页面的跳转，页面内容发生改变，url不变。可以带-request和-session参数。在-servlet里使用-getServletConfig-getServletContext-getRequestDispatcher-url-forward-request-response-。而这里的url前需要带斜线-，如getServletConfig-getServletContext-getRequestDispatcher-”-test-jsp“-forward-request-response-。" class="headerlink" title="url转发 ( Forward)：是页面的跳转，页面内容发生改变，url不变。可以带 request和 session参数。在 servlet里使用 getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response)。而这里的url前需要带斜线 /，如getServletConfig().getServletContext().getRequestDispatcher(”/test.jsp“).forward(request, response)。"></a>url转发 ( Forward)：是页面的跳转，页面内容发生改变，url不变。可以带 request和 session参数。在 servlet里使用 getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response)。而这里的url前需要带斜线 /，如getServletConfig().getServletContext().getRequestDispatcher(”/test.jsp“).forward(request, response)。</h3><p>例：<br>java代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String   a= &quot;abccdefg &quot;; </span><br><span class="line">request.setAttribute( &quot;ValueA &quot;,a); </span><br><span class="line">request.getRequestDispatcher( &quot;网址/jsp页面 &quot;).forward(request,response);</span><br></pre></td></tr></table></figure>
+
+<p>jsp页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">String   s   =(String)request.getAttribute( &quot;ValueA &quot;);</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/28/JSP与Servlet/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/课堂笔记1021/" class="archive-article-date">
-  	<time datetime="2019-10-21T23:51:26.972Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T09:04:04.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2019/10/22/课堂笔记1021/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -263,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
