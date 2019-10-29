@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JSP与Servlet | Hexo</title>
+  <title>JSP内置对象 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
+  <meta name="description" content="JSP九大内置对象 （一）Request：客户端与服务器的一次请求中封装了用户提交的信息（包裹），该对象可以设置请求转 发request.getRequestDispatcher(String URL).forward(request,response)，是服务器行为，是一次请求， 所以页面的URL为原始请求处理的响应页面的URL（不是最终的处理请求的响应页面，因为客户端只请求一次）。    （二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSP与Servlet">
-<meta property="og:url" content="http://yoursite.com/2019/10/28/JSP与Servlet/index.html">
+<meta property="og:title" content="JSP内置对象">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/JSP内置对象/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
+<meta property="og:description" content="JSP九大内置对象 （一）Request：客户端与服务器的一次请求中封装了用户提交的信息（包裹），该对象可以设置请求转 发request.getRequestDispatcher(String URL).forward(request,response)，是服务器行为，是一次请求， 所以页面的URL为原始请求处理的响应页面的URL（不是最终的处理请求的响应页面，因为客户端只请求一次）。    （二">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T02:17:24.608Z">
+<meta property="og:updated_time" content="2019-10-29T00:16:02.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSP与Servlet">
-<meta name="twitter:description" content="JSP JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。   Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。   JSP是放在服务器中展示的页面。   JSP有9个内置对象：request、response、page、sessio">
+<meta name="twitter:title" content="JSP内置对象">
+<meta name="twitter:description" content="JSP九大内置对象 （一）Request：客户端与服务器的一次请求中封装了用户提交的信息（包裹），该对象可以设置请求转 发request.getRequestDispatcher(String URL).forward(request,response)，是服务器行为，是一次请求， 所以页面的URL为原始请求处理的响应页面的URL（不是最终的处理请求的响应页面，因为客户端只请求一次）。    （二">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,78 +154,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JSP与Servlet" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JSP内置对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JSP与Servlet
+      JSP内置对象
     </h1>
   
 
         
-        <a href="/2019/10/28/JSP与Servlet/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+        <a href="/2019/10/29/JSP内置对象/" class="archive-article-date">
+  	<time datetime="2019-10-29T00:01:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ul>
-<li>JSP(Java Server Pages)是部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。</li>
+        <h2 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h2><ul>
+<li>（一）Request：客户端与服务器的一次请求中封装了用户提交的信息（包裹），该对象可以设置请求转 发request.getRequestDispatcher(String URL).forward(request,response)，是服务器行为，是一次请求， 所以页面的URL为原始请求处理的响应页面的URL（不是最终的处理请求的响应页面，因为客户端只请求一次）。 </li>
 </ul>
 <ul>
-<li>Tomcat服务器是在Linux软件中运行的，而JSP是在Tomcat服务器中运行的。</li>
+<li>（二）Response：对客户的请求做出的响应，向客户端发送数据，该对象可以设置重定向 response.sendRedirect(String URL)，是客户端行为，是两次请求，所以页面的URL为二次请求处理的响 应页面的URL。 </li>
 </ul>
 <ul>
-<li>JSP是放在服务器中展示的页面。</li>
+<li>（三）Session：该对象是客户端与服务器的一次会话，只要不关闭服务器的所有页面（离开这个服务 器），就只视为一次会话。Session在第一个JSP页面被装载时自动创建，完成会话期管理。当一个客户 首次访问服务器上的一个JSP页面时，JSP 引擎产生一个Session对象，同时分配一个String类型的ID号， JSP引擎同时将这换个ID号发送到客户端，存放在Cookie（要求服务器启用Cookie权限）中，这样 Session对象，直到客户关闭浏览器后，服务器端该客户的Session对象才取消，并且和客户的会话对应关 系消失。当客户重新打开浏览器再连接到该服务器时，服务器为该客户再重新创建一个新的Session对象 拥有新的ID号。常用方法为String getId()获取ID号以及Boolean isNew()判断是否是一个新的客户。 Session可以理解为线程私有的。 </li>
 </ul>
 <ul>
-<li>JSP有9个内置对象：request、response、page、session、application、out、pagecontext、exception、config。</li>
+<li>（四）Application：服务器启动时产生，共享性。</li>
 </ul>
 <ul>
-<li>JSP是运行小型项目。<h3 id="JSp插入CSS样式："><a href="#JSp插入CSS样式：" class="headerlink" title="JSp插入CSS样式："></a>JSp插入CSS样式：</h3></li>
-<li>(1)外部样式<br>当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用<link>标签链接到样式表。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&lt;%=uiPath%&gt;hwtt_ui/skins/&lt;%=skinName%&gt;/css/login.css&quot; /&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>注：rel 属性规定当前文档与被链接文档之间的关系，在该例子中rel 属性指示被链接的文档是一个样式表。</p>
-<ul>
-<li>(2)内部样式<br>当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;style&gt;标签在文档头部定义内部样式表。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;        </span><br><span class="line">.loginBtn&#123;display:block;            </span><br><span class="line">          cursor: pointer;            </span><br><span class="line">          height: 32px;            </span><br><span class="line">          margin-bottom: 1px;            </span><br><span class="line">          width: 100px; </span><br><span class="line">          &#125;    </span><br><span class="line">          &lt;/style&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<li>（五）Out：Out对象本质是一个输出流，用来向客户端输出数据。Out对象用于各种数据的输出。<h3 id="常用方法为："><a href="#常用方法为：" class="headerlink" title="常用方法为："></a>常用方法为：</h3>out.print()：输出各种类型数据。<br>out.newLine()：输出一个换行符。<br>out.close()：关闭流。 </li>
 </ul>
 <ul>
-<li>(3)内联样式<br>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style属性可以包含任何CSS属性。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;authCode&quot; style=&quot;vertical-align: middle&quot; /&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><ul>
-<li>Servlet主要用于写大型项目。</li>
+<li>（六）Config：配置对象。 </li>
 </ul>
 <ul>
-<li>Servlet只提供后端的逻辑控制。</li>
+<li>（七）Page：页面。 </li>
 </ul>
 <ul>
-<li>Servlet也有9个内置对象。<h2 id="JSP传递数据给Servlet的方式"><a href="#JSP传递数据给Servlet的方式" class="headerlink" title="JSP传递数据给Servlet的方式"></a>JSP传递数据给Servlet的方式</h2><h3 id="form表单："><a href="#form表单：" class="headerlink" title="form表单："></a>form表单：</h3></li>
-<li>方法1<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;项目名/servlet名&quot;  method=&quot;post或者get&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; name=&quot;ok&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<li>（八）PageContext：页面应用上下文环境。可通过该对象获取依赖于页面上下文环境的Node。 </li>
+</ul>
+<ul>
+<li>（九）Exception：只有在处理异常的网页中可以直接访问exception隐式对象。<h2 id="JSP七种传参方式"><a href="#JSP七种传参方式" class="headerlink" title="JSP七种传参方式"></a>JSP七种传参方式</h2></li>
+<li>（一）JavaBean<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;XXX&quot; class=&quot;JavaBean的全限定名(page+calssName)&quot; scope=&quot;session&quot; /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li>方法2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form name=&quot;form1&quot; id=&quot;form1&quot; action=&quot;项目名/servlet名&quot;  method=&quot;post或者get&quot;&gt; </span><br><span class="line">&lt;input type=&quot;button&quot; name=&quot;ok&quot; value=&quot;提交&quot; onclick=&quot;submit()&quot;&gt; </span><br><span class="line">&lt;/form&gt; </span><br><span class="line">&lt;script&gt; function submit()&#123;      $(&quot;#form1&quot;).submit(); &#125; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<li>（二）Session<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.setAttribute(String key,Object value)/seesion.getAttribute(String key)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>（三）Application<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">application.setAttribute(String key,Object value)/application.getAttribute(String key)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>（四）Request<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.setParater(String key,String value)/request.getParater(String key) request.setAttribute(String key,Object value)/request.getAttribute(String key)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h3 id="url传值"><a href="#url传值" class="headerlink" title="url传值"></a>url传值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;a1&quot; href=&quot;&quot; &gt;&lt;/a&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"> $(&quot;#a1&quot;).attr(&quot;href&quot;,&quot;url?参数=&quot;+值);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>+（五）JSP动作指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward/redirect page=&quot;XXX.jsp&quot;&gt; &lt;jsp:param name=&quot;key-x&quot; value=&quot;value-x&quot; /&gt; &lt;jsp:param name=&quot;key-y&quot; value=&quot;value-y&quot; /&gt; &lt;/jsp:forward/redirect&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Servlet把数据传给JSP"><a href="#Servlet把数据传给JSP" class="headerlink" title="Servlet把数据传给JSP"></a>Servlet把数据传给JSP</h2><h3 id="重定向-Redirect-：是路径的跳转，内容和-url都改变。不允许带-request参数-session参数可以-，即不允许在servlet里给-request对象使用setAttribute方法传给下一页面。在-servlet里使用-response-sendRedirect-url-方法。"><a href="#重定向-Redirect-：是路径的跳转，内容和-url都改变。不允许带-request参数-session参数可以-，即不允许在servlet里给-request对象使用setAttribute方法传给下一页面。在-servlet里使用-response-sendRedirect-url-方法。" class="headerlink" title="重定向 ( Redirect)：是路径的跳转，内容和 url都改变。不允许带 request参数( session参数可以)，即不允许在servlet里给 request对象使用setAttribute方法传给下一页面。在 servlet里使用 response.sendRedirect(url) 方法。"></a>重定向 ( Redirect)：是路径的跳转，内容和 url都改变。不允许带 request参数( session参数可以)，即不允许在servlet里给 request对象使用setAttribute方法传给下一页面。在 servlet里使用 response.sendRedirect(url) 方法。</h3><p>注意：这里的 url前不带斜线/,如 response.sendRedirect(“test.jsp”)。</p>
-<h3 id="url转发-Forward-：是页面的跳转，页面内容发生改变，url不变。可以带-request和-session参数。在-servlet里使用-getServletConfig-getServletContext-getRequestDispatcher-url-forward-request-response-。而这里的url前需要带斜线-，如getServletConfig-getServletContext-getRequestDispatcher-”-test-jsp“-forward-request-response-。"><a href="#url转发-Forward-：是页面的跳转，页面内容发生改变，url不变。可以带-request和-session参数。在-servlet里使用-getServletConfig-getServletContext-getRequestDispatcher-url-forward-request-response-。而这里的url前需要带斜线-，如getServletConfig-getServletContext-getRequestDispatcher-”-test-jsp“-forward-request-response-。" class="headerlink" title="url转发 ( Forward)：是页面的跳转，页面内容发生改变，url不变。可以带 request和 session参数。在 servlet里使用 getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response)。而这里的url前需要带斜线 /，如getServletConfig().getServletContext().getRequestDispatcher(”/test.jsp“).forward(request, response)。"></a>url转发 ( Forward)：是页面的跳转，页面内容发生改变，url不变。可以带 request和 session参数。在 servlet里使用 getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response)。而这里的url前需要带斜线 /，如getServletConfig().getServletContext().getRequestDispatcher(”/test.jsp“).forward(request, response)。</h3><p>例：<br>java代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String   a= &quot;abccdefg &quot;; </span><br><span class="line">request.setAttribute( &quot;ValueA &quot;,a); </span><br><span class="line">request.getRequestDispatcher( &quot;网址/jsp页面 &quot;).forward(request,response);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>（六）Form表单：</li>
+</ul>
+<ul>
+<li>（七）URL传参：URL.jsp?参数1 的key=参数1的value&amp; 参数n的key=参数n 的value <h2 id="JSP四个作用域"><a href="#JSP四个作用域" class="headerlink" title="JSP四个作用域"></a>JSP四个作用域</h2></li>
+<li>(一）Application：共享、全局、服务器启动时产生，重启服务器销毁。可以包含很多个session。 </li>
+</ul>
+<ul>
+<li>(二）Session：会话。隔离。生命周期是从用户发起链接服务器至彻底与服务器完全断开。可以包含很 多个request。所谓当前会话，就是指从用户打开浏览器开始，到用户关闭浏览器这中间的过程.</li>
+</ul>
+<ul>
+<li>（三）Request：有效域是当前请求周期。所谓请求周期，就是指从http请求发起，到服务器处理结束， 返回响应的整个过程。在这个过程中可能使用forward的方式跳转了多个jsp页面，在这些页面里你都可以 使用这个变量。 （四）Page：有效域是当前页面，可以把参数放入PageContext中，只有跳转就失效。</li>
+</ul>
 
-<p>jsp页面：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">String   s   =(String)request.getAttribute( &quot;ValueA &quot;);</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -304,7 +311,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/28/JSP与Servlet/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/29/JSP内置对象/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +325,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/29/JSP内置对象/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JSP内置对象
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/22/课堂笔记1021/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2019/10/28/JSP与Servlet/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP与Servlet</div>
       <i class="icon-circle-right"></i>
     </a>
   
