@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>数据库连接JAVA的增删改查操作 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="加载驱动，连接数据库123456789101112131415161718public class Test &amp;#123;    public static final String driver=&amp;quot;com.mysql.jdbc.Driver&amp;quot;;//驱动    public static final String url=&amp;quot;jdbc:mysql://localhost">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库连接JAVA的增删改查操作">
+<meta property="og:url" content="http://yoursite.com/2019/10/31/数据库连接JAVA的增删改查操作/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="加载驱动，连接数据库123456789101112131415161718public class Test &amp;#123;    public static final String driver=&amp;quot;com.mysql.jdbc.Driver&amp;quot;;//驱动    public static final String url=&amp;quot;jdbc:mysql://localhost">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-31T02:20:16.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="数据库连接JAVA的增删改查操作">
+<meta name="twitter:description" content="加载驱动，连接数据库123456789101112131415161718public class Test &amp;#123;    public static final String driver=&amp;quot;com.mysql.jdbc.Driver&amp;quot;;//驱动    public static final String url=&amp;quot;jdbc:mysql://localhost">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,151 +154,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-数据库连接JAVA的增删改查操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数据库连接JAVA的增删改查操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/数据库连接JAVA的增删改查操作/" class="archive-article-date">
+
+        
+        <a href="/2019/10/31/数据库连接JAVA的增删改查操作/" class="archive-article-date">
   	<time datetime="2019-10-31T02:16:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/数据库连接JAVA的增删改查操作/">数据库连接JAVA的增删改查操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="加载驱动，连接数据库"><a href="#加载驱动，连接数据库" class="headerlink" title="加载驱动，连接数据库"></a>加载驱动，连接数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line"></span><br><span class="line">    public static final String driver=&quot;com.mysql.jdbc.Driver&quot;;//驱动</span><br><span class="line">    public static final String url=&quot;jdbc:mysql://localhost:3306/stu&quot;;//指向数据库名</span><br><span class="line">    public static final String user=&quot;root&quot;;//用户</span><br><span class="line">    public static final String password=&quot;123456&quot;;//密码</span><br><span class="line"></span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Class.forName(driver);//加载驱动</span><br><span class="line">            Connection connection=DriverManager.getConnection(url,user,password);//创建连接</span><br><span class="line">            queryDataBase(connection);</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static void queryDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        String sql=&quot;SELECT * FROM user&quot;;</span><br><span class="line">        Statement statement=connection.createStatement();</span><br><span class="line">        ResultSet resultSet=statement.executeQuery(sql);</span><br><span class="line">        int id;</span><br><span class="line">        String name=null;</span><br><span class="line">        int age;</span><br><span class="line">        String gender=null;</span><br><span class="line">        while (resultSet.next())&#123;</span><br><span class="line">            id=resultSet.getInt(&quot;id&quot;);</span><br><span class="line">            name=resultSet.getString(&quot;name&quot;);</span><br><span class="line">            age=resultSet.getInt(&quot;age&quot;);</span><br><span class="line">            gender=resultSet.getString(&quot;gender&quot;);</span><br><span class="line">            System.out.println(&quot;id:&quot;+id+&quot;;name:&quot;+name+&quot;;age:&quot;+age+&quot;;gender:&quot;+gender);</span><br><span class="line">        &#125;</span><br><span class="line">        statement.close();</span><br><span class="line">        resultSet.close();</span><br><span class="line">    &#125; catch (SQLException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;finally &#123;</span><br><span class="line">        System.out.println(&quot;数据查询成功!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void insertDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=</span><br><span class="line">                connection.prepareStatement(&quot;INSERT INTO user(id,name,age,gender) VALUES (?,?,?,?)&quot;);</span><br><span class="line">        preparedStatement.setInt(1,4);</span><br><span class="line">        preparedStatement.setString(2,&quot;马云&quot;);</span><br><span class="line">        preparedStatement.setInt(3,30);</span><br><span class="line">        preparedStatement.setString(4,&quot;男&quot;);</span><br><span class="line">        preparedStatement.executeUpdate();//插入，修改和删除数据时都要用excuteUpdate()</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public  static void updateDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=connection.prepareStatement(&quot;UPDATE user SET name=? WHERE id=?&quot;);</span><br><span class="line">        preparedStatement.setString(1,&quot;马化腾&quot;);</span><br><span class="line">        preparedStatement.setInt(2,3);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static void deleteDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=connection.prepareStatement(&quot;DELETE FROM user WHERE id=?&quot;);</span><br><span class="line">        preparedStatement.setInt(1,2);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>}</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/31/数据库连接JAVA的增删改查操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/JSP内置对象/" class="archive-article-date">
-  	<time datetime="2019-10-29T00:01:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/29/JSP内置对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP内置对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/JSP内置对象/">JSP内置对象</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/JSP与Servlet/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/JSP与Servlet/">JSP与Servlet</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/课堂笔记1021/" class="archive-article-date">
-  	<time datetime="2019-10-21T23:51:26.972Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T09:04:04.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -317,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

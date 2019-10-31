@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数据库连接JAVA的增删改查操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/31/数据库连接JAVA的增删改查操作/">数据库连接JAVA的增删改查操作</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/31/数据库连接JAVA的增删改查操作/" class="archive-article-date">
+  	<time datetime="2019-10-31T02:16:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="加载驱动，连接数据库"><a href="#加载驱动，连接数据库" class="headerlink" title="加载驱动，连接数据库"></a>加载驱动，连接数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line"></span><br><span class="line">    public static final String driver=&quot;com.mysql.jdbc.Driver&quot;;//驱动</span><br><span class="line">    public static final String url=&quot;jdbc:mysql://localhost:3306/stu&quot;;//指向数据库名</span><br><span class="line">    public static final String user=&quot;root&quot;;//用户</span><br><span class="line">    public static final String password=&quot;123456&quot;;//密码</span><br><span class="line"></span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Class.forName(driver);//加载驱动</span><br><span class="line">            Connection connection=DriverManager.getConnection(url,user,password);//创建连接</span><br><span class="line">            queryDataBase(connection);</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static void queryDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        String sql=&quot;SELECT * FROM user&quot;;</span><br><span class="line">        Statement statement=connection.createStatement();</span><br><span class="line">        ResultSet resultSet=statement.executeQuery(sql);</span><br><span class="line">        int id;</span><br><span class="line">        String name=null;</span><br><span class="line">        int age;</span><br><span class="line">        String gender=null;</span><br><span class="line">        while (resultSet.next())&#123;</span><br><span class="line">            id=resultSet.getInt(&quot;id&quot;);</span><br><span class="line">            name=resultSet.getString(&quot;name&quot;);</span><br><span class="line">            age=resultSet.getInt(&quot;age&quot;);</span><br><span class="line">            gender=resultSet.getString(&quot;gender&quot;);</span><br><span class="line">            System.out.println(&quot;id:&quot;+id+&quot;;name:&quot;+name+&quot;;age:&quot;+age+&quot;;gender:&quot;+gender);</span><br><span class="line">        &#125;</span><br><span class="line">        statement.close();</span><br><span class="line">        resultSet.close();</span><br><span class="line">    &#125; catch (SQLException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;finally &#123;</span><br><span class="line">        System.out.println(&quot;数据查询成功!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void insertDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=</span><br><span class="line">                connection.prepareStatement(&quot;INSERT INTO user(id,name,age,gender) VALUES (?,?,?,?)&quot;);</span><br><span class="line">        preparedStatement.setInt(1,4);</span><br><span class="line">        preparedStatement.setString(2,&quot;马云&quot;);</span><br><span class="line">        preparedStatement.setInt(3,30);</span><br><span class="line">        preparedStatement.setString(4,&quot;男&quot;);</span><br><span class="line">        preparedStatement.executeUpdate();//插入，修改和删除数据时都要用excuteUpdate()</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public  static void updateDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=connection.prepareStatement(&quot;UPDATE user SET name=? WHERE id=?&quot;);</span><br><span class="line">        preparedStatement.setString(1,&quot;马化腾&quot;);</span><br><span class="line">        preparedStatement.setInt(2,3);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static void deleteDataBase(Connection connection)&#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        PreparedStatement preparedStatement=connection.prepareStatement(&quot;DELETE FROM user WHERE id=?&quot;);</span><br><span class="line">        preparedStatement.setInt(1,2);</span><br><span class="line">        preparedStatement.executeUpdate();</span><br><span class="line">        preparedStatement.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>}</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/31/数据库连接JAVA的增删改查操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JSP内置对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -399,7 +472,16 @@
 <h2 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h2><p>JSP项目是在后台开发框架成熟前使用较多的一种JavaWeb技术，后期会逐渐过度到后台框架。<br>jvm只能处理java编译的class文件。</p>
 <h3 id="JSP和后台框架"><a href="#JSP和后台框架" class="headerlink" title="JSP和后台框架"></a>JSP和后台框架</h3><p>核心技术均为Servlet<br>Servlet在jdk中的包为：javax.servlet.http.HttpServlet。</p>
 <h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><ol>
-<li>jsp和servlet的区别和联系：<br>1). jsp经编译后就变成了Servlet.<br>(JSP的本质就是Servlet，JVM只能识别java的类(.class)，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类)<br>2).jsp更擅长表现于页面显示,servlet更擅长于逻辑控制.<br>3).Servlet中没有内置对象，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletResponse对象以及HttpServlet对象得到.<br>Jsp是Servlet的一种简化，使用Jsp只需要完成程序员需要输出到客户端的内容，Jsp中的Java脚本如何镶嵌到一个类中，由Jsp容器完成。<br>而Servlet则是个完整的Java类，这个类的Service方法用于生成对客户端的响应。</li>
+<li>jsp和servlet的区别和联系：<ul>
+<li>1).jsp经编译后就变成了Servlet.<br>(JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类)</li>
+</ul>
+<ul>
+<li>2).jsp更擅长表现于页面显示,servlet更擅长于逻辑控制.</li>
+</ul>
+<ul>
+<li>3).Servlet中没有内置对象，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletResponse对象以及HttpServlet对象得到.<br>Jsp是Servlet的一种简化，使用Jsp只需要完成程序员需要输出到客户端的内容，Jsp中的Java脚本如何镶嵌到一个类中，由Jsp容器完成。<br>而Servlet则是个完整的Java类，这个类的Service方法用于生成对客户端的响应。</li>
+</ul>
+</li>
 </ol>
 <ol start="2">
 <li>联系：  </li>
@@ -412,8 +494,7 @@
 <li>JSP侧重于视图，Servlet主要用于控制逻辑。(JSP不能脱离Servlet，但Servelet可独立存在)</li>
 <li>Servlet更多的是类似于一个Controller，用来做控制。</li>
 </ul>
-<h2 id="servlet类中的方法"><a href="#servlet类中的方法" class="headerlink" title="servlet类中的方法"></a>servlet类中的方法</h2><h3 id="servlet中的方法"><a href="#servlet中的方法" class="headerlink" title="servlet中的方法"></a>servlet中的方法</h3><p>doGet()方法：用get方式传输网络数据<br>get方式：明文传参(地址栏显示)、传输数据较小、</p>
-<p>doPost()方法：用post方式传输网络数据<br>post方式：暗文传参(地址栏不显示)、传输数据较大、</p>
+<h2 id="servlet类中的方法"><a href="#servlet类中的方法" class="headerlink" title="servlet类中的方法"></a>servlet类中的方法</h2><h3 id="servlet中的方法"><a href="#servlet中的方法" class="headerlink" title="servlet中的方法"></a>servlet中的方法</h3><p>doGet()方法：用get方式传输网络数据<br>get方式：明文传参(地址栏显示)、传输数据较小、<br>doPost()方法：用post方式传输网络数据<br>post方式：暗文传参(地址栏不显示)、传输数据较大、</p>
 <h3 id="页面跳转方式"><a href="#页面跳转方式" class="headerlink" title="页面跳转方式"></a>页面跳转方式</h3><p>页面跳转的方式分类：</p>
 <ol>
 <li><p>转发：foward(地址栏URL不变)</p>
