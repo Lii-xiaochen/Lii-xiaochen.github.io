@@ -152,6 +152,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JSP登陆后显示信息与注销登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/22/JSP登陆后显示信息与注销登录/">JSP登陆后显示信息与注销登录 </a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/22/JSP登陆后显示信息与注销登录/" class="archive-article-date">
+  	<time datetime="2019-11-22T02:49:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="登录成功"><a href="#登录成功" class="headerlink" title="//登录成功"></a>//登录成功</h2><p>~<br>response.sendRedirect(“/success.jsp”);<br>~<br>~<br>&lt;%</p>
+<h4 id="从Request获取id、pwd、name的值"><a href="#从Request获取id、pwd、name的值" class="headerlink" title="//从Request获取id、pwd、name的值"></a>//从Request获取id、pwd、name的值</h4><p>String id= request.getParameter(“id”);</p>
+<p>String pwd= request.getParameter(“pwd”);</p>
+<p>String name= request.getParamete(“name”);</p>
+<p>//获取Session对象</p>
+<p>String path = request.getContextPath();</p>
+<p>HttpSession session=request.getSession();</p>
+<p>//向Session对象内放属性</p>
+<p>session.setAttribute(“id”, id);</p>
+<p>session.setAttribute(“pwd”, pwd);</p>
+<p>session.setAttribute(“name”, name);<br>//页面输出</p>
+<p>out.println(“<span>欢迎”+name+”登录</span>“); </p>
+<p>//注销链接</p>
+<p><a href="out.jsp">注销</a><br>%&gt;</p>
+<h2 id="注销页面-out-jsp-如下："><a href="#注销页面-out-jsp-如下：" class="headerlink" title="注销页面(out.jsp)如下："></a>注销页面(out.jsp)如下：</h2><p>&lt;%<br>//获取Session对象</p>
+<p>String path = request.getContextPath();</p>
+<p>HttpSession session=request.getSession();</p>
+<p>//清空Session中的登录信息相关属性</p>
+<pre><code>session.removeAttribute(&quot;id&quot;);
+
+session.removeAttribute(&quot;pwd&quot;);
+
+   session.removeAttribute(&quot;name&quot;);</code></pre><p>//上下文路径</p>
+<p>String path = request.getContextPath();<br>//重定向到首页(未登录状态)</p>
+<p>response.sendRedirect(path+”/index.jsp”);</p>
+<p>%&gt;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/22/JSP登陆后显示信息与注销登录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JSP连接数据库-登录验证" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
