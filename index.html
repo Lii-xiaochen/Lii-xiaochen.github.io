@@ -152,6 +152,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Servlet的常见错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/25/Servlet的常见错误/">Servlet的常见错误</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/25/Servlet的常见错误/" class="archive-article-date">
+  	<time datetime="2019-11-25T01:37:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="404错误："><a href="#404错误：" class="headerlink" title="404错误："></a>404错误：</h2><h3 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h3><ul>
+<li>一：在请求地址中的servlet的别名书写错误</li>
+</ul>
+<ul>
+<li>二：虚拟项目名称拼写错误<h2 id="500错误："><a href="#500错误：" class="headerlink" title="500错误："></a>500错误：</h2><h3 id="错误一："><a href="#错误一：" class="headerlink" title="错误一："></a>错误一：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ClassNotFOUNDException:com.bjsxt.servlet.ServletMothod</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><p>在web.xml中检验Servlet类的权限定路径是否拼写错误</p>
+<h3 id="错误二："><a href="#错误二：" class="headerlink" title="错误二："></a>错误二：</h3><p>Service方法体的代码执行错误导致</p>
+<h3 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a>解决方案：</h3><p>根据错误提示对servlet方法中的代码错误进行更改</p>
+<h2 id="405错误："><a href="#405错误：" class="headerlink" title="405错误："></a>405错误：</h2><h3 id="报错原因：-1"><a href="#报错原因：-1" class="headerlink" title="报错原因："></a>报错原因：</h3><p>请求方式和servlet中的方法不匹配所造成的</p>
+<h3 id="解决方案：-2"><a href="#解决方案：-2" class="headerlink" title="解决方案："></a>解决方案：</h3><p>尽量使用servlet方法进行请求处理，并且不要在servlet方法中调用父类servlet。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/25/Servlet的常见错误/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数据库的增删改查语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
