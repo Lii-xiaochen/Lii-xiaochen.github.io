@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>什么是Servlet | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="Servlet生命周期 加载Servletweb容器负责加载servlet，当web容器启动时或者是在第一次使用这个servlet时，容器会负责创建servlet实例   初始化当一个servlet加载后，容器将调用init（）方法初始化这个对象，初始化的目的是为了让servlet在处理客户端请求前完成一些初始化的工作   请求处理当有请求提交时，servlet将调用service（）方法进行处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是Servlet">
+<meta property="og:url" content="http://yoursite.com/2019/12/12/什么是Servlet/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Servlet生命周期 加载Servletweb容器负责加载servlet，当web容器启动时或者是在第一次使用这个servlet时，容器会负责创建servlet实例   初始化当一个servlet加载后，容器将调用init（）方法初始化这个对象，初始化的目的是为了让servlet在处理客户端请求前完成一些初始化的工作   请求处理当有请求提交时，servlet将调用service（）方法进行处理">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-12T02:47:31.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="什么是Servlet">
+<meta name="twitter:description" content="Servlet生命周期 加载Servletweb容器负责加载servlet，当web容器启动时或者是在第一次使用这个servlet时，容器会负责创建servlet实例   初始化当一个servlet加载后，容器将调用init（）方法初始化这个对象，初始化的目的是为了让servlet在处理客户端请求前完成一些初始化的工作   请求处理当有请求提交时，servlet将调用service（）方法进行处理">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,100 +154,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-什么是Servlet" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/JSP与Servlet/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/JSP与Servlet/">JSP与Servlet</a>
+    <h1 class="article-title" itemprop="name">
+      什么是Servlet
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/课堂笔记1021/" class="archive-article-date">
-  	<time datetime="2019-10-21T23:51:26.972Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
+        
+        <a href="/2019/12/12/什么是Servlet/" class="archive-article-date">
+  	<time datetime="2019-12-12T02:45:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
 </a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><ul>
+<li>加载Servlet<br>web容器负责加载servlet，当web容器启动时或者是在第一次使用这个servlet时，容器会负责创建servlet实例</li>
+</ul>
+<ul>
+<li>初始化<br>当一个servlet加载后，容器将调用init（）方法初始化这个对象，初始化的目的是为了让servlet在处理客户端请求前完成一些初始化的工作</li>
+</ul>
+<ul>
+<li>请求处理<br>当有请求提交时，servlet将调用service（）方法进行处理客户端请求，并且会根据不同的请求调用不同的doGet（）或doPost（）方法</li>
+</ul>
+<ul>
+<li>销毁<br>当web容器关闭或检测到一个servlet实例要从服务器中被移除时，容器就会调用destroy（）方法，以便让该实例释放掉所占用的资源<h2 id="什么是servlet？"><a href="#什么是servlet？" class="headerlink" title="什么是servlet？"></a>什么是servlet？</h2>servlet是用来处理客户端请求并产生动态网页内容的java类。<h2 id="在程序里怎样注册Servlet"><a href="#在程序里怎样注册Servlet" class="headerlink" title="在程序里怎样注册Servlet."></a>在程序里怎样注册Servlet.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">配置文件添加信息：</span><br><span class="line">Web.xml中创建servlet标签。</span><br><span class="line">&lt;servlet&gt;</span><br><span class="line">    &lt;display-name&gt;显示名字&lt;/display-name&gt;</span><br><span class="line">&lt;servlet-name&gt;名字&lt;/servlet-name&gt;</span><br><span class="line">&lt;servlet-class&gt;项目中包名、类名&lt;/servlet-class&gt;</span><br><span class="line">&lt;/servlet&gt;</span><br><span class="line">&lt;servlet-mapping&gt;</span><br><span class="line">&lt;servlet-name&gt;名字&lt;/servlet-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;url地址&lt;/url-pattern&gt;</span><br><span class="line">&lt;/servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<p>注解的方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@WebServlet(“/XXServlet”)</span><br><span class="line">Public class XXServlet extends HttpServlet&#123;&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/12/什么是Servlet/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T09:04:04.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/03/JSP中的EL语言和JAVA脚本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP中的EL语言和JAVA脚本</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -267,8 +340,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
